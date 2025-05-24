@@ -1,0 +1,46 @@
+{% extends 'studenthome.html' %}
+{%  block  'body' %}
+
+<h2 align="center" style="color:green">{{msg}}</h2>
+<h3 align="center"><u>View Course</u></h3>
+<form method="post" action="{%  url 'studentcoursemapping'  %}">
+    {% csrf_token %}
+    <table align="center" width="40%" height="50%" >
+
+        <tr>
+        <td><label> Academic Year</label></td>
+        <td>
+            <select name="Year" required>
+                <option value="">--Select--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </td>
+        </tr>
+
+
+
+         <tr>
+        <td><label> Semester</label></td>
+        <td>
+            <select name="semester" required>
+                <option value="">--Select--</option>
+                <option value="ODD">ODD SEM</option>
+                <option value="EVEN">EVEN SEM</option>
+
+            </select>
+        </td>
+        </tr>
+
+
+
+
+
+          <td><input type="submit" value="Continue"> </td>
+
+        </tr>
+    </table>
+</form>
+{%  endblock %}

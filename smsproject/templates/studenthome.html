@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>PFSD SKILL</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div style="background-color:#5CDB95;padding:20px;font-size:15pt">
+<a style="margin-left:80px;color:white;text-decoration:none;" href="{% url 'studenthome' %}">Home</a>&nbsp;&nbsp;&nbsp;
+<a style="margin-left:80px;color:white;text-decoration:none;" href="{% url 'studentchangepw' %}">Change Password</a>&nbsp;&nbsp;&nbsp;
+ <a style="margin-left:80px;color:white;text-decoration:none;" href="{% url 'studentcourses' %}">Courses</a>&nbsp;&nbsp;
+<a style="margin-left:80px;color:white;text-decoration:none;" href="{% url 'studentlogin' %}">LogOut</a>&nbsp;&nbsp;
+    &nbsp;</div>
+<h3 align="center" style="colout:red"><i>Welcome {{sid}}</i></h3>
+
+
+<br><br>
+
+{% block 'body' %}
+
+<p>I am in Student Home</p>
+
+{%  endblock  %}
+</body>
+</html>

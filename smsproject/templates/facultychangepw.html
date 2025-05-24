@@ -1,0 +1,61 @@
+{% extends 'facultyhome.html' %}
+
+{%  block  'body' %}
+<h2 align="center" style="color:red">{{message}}</h2>
+
+<h3 align="center" style="color:green"><u>Change Password</u></h3>
+<br>
+
+<center>
+
+<form method="POST" action="{% url 'facultyupdatepw' %}">
+  {% csrf_token %}
+    <table align="center" width="52%" height="42%">
+        <tr>
+           <tr>
+            <td>
+            <label>Enter Old Password</label>
+            </td>
+            <td>
+            <input type="password" name="opwd" required/>
+            </td>
+        </tr>
+        </tr>
+
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            <label>Enter New Password</label>
+            </td>
+            <td>
+            <input type="password" name="npwd" required/>
+            </td>
+
+        <tr>
+        <td>
+
+
+        </td>
+        </tr>
+
+
+            <tr align="center" width="35%" data-height="35%">
+            <td>
+            <input type="Submit" value="Update" class="addbutton"/>
+            </td>
+            <td>
+            <input type="Reset" value="Clear" class="addbutton"/>
+            </td>
+        </tr>
+
+
+        </tr>
+    </table>
+</form>
+</center>
+{%  endblock %}

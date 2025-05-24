@@ -1,0 +1,28 @@
+{% extends 'adminhome.html' %}
+
+
+{% block 'body' %}
+
+<h3 align="center"><u>Faculty Mapping Courses</u></h3>
+
+
+
+<center>
+<button class="button">
+    <a href="{% url 'addfcoursemapping' %}">Add Fcoursemapping</a>
+</button>
+
+    <button class="button">
+    <a href="{% url 'viewfcoursemapping' %}">View all Faculty</a>
+</button>
+
+    <button class="button">
+    <a href="">Update Faculty</a>
+</button>
+
+    <button class="button">
+    <a href="{% url 'deletefcoursemapping' %}">Delete Faculty</a>
+</button>
+    </center>
+
+{%  endblock  %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h3>Available faculty</h3></center>
+<table align="center" border="2" width="50"  height="50" class="table table-bordered table-striped">
+    <thead>
+    <tr bgcolor="lightblue" align="center">
+        <td>ID</td>
+        <td>Name</td>
+        <td>Gender</td>
+        <td>Qualification</td>
+        <td>select</td>
+    </tr>
+    </thead>
+    <tbody  id="myTable">
+{% for i in  fdetails %}
+<tr bgcolor="" align="center">
+    <td>{{i.id}}</td>
+    <td>{{i.Fullname}}</td>
+    <td>{{i.gender}}</td>
+    <td>{{i.qualification}}</td>
+    <td><button class="btn btn primary"> Select </button></td>
+</tr>
+{%endfor%}
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends 'studenthome.html' %}
+{%  block  'body' %}
+
+<table align="center" border="2" width="50"  height="50" class="table table-bordered table-striped">
+    <thead>
+    <tr bgcolor="lightblue" align="center">
+        <td>Department</td>
+        <td>Semester</td>
+        <td>Year</td>
+        <td>Coursecode</td>
+        <td>Coursetitle</td>
+        <td>Select</td>
+    </tr>
+    </thead>
+    <tbody  id="myTable">
+    {% for course in  coursedata %}
+
+
+    <tr bgcolor="" align="center">
+        <td>{{course.department}}</td>
+        <td>{{course.semester}}</td>
+        <td>{{course.Year}}</td>
+        <td>{{course.coursecode}}</td>
+        <td>{{course.coursetitle}}</td>
+        <td><form><input type="checkbox" required ></form></td>
+    </tr>
+
+
+    {%   endfor   %}
+
+    </tbody>
+</table>
+<center><td> <a href="/studentfacultymapping">submit</a></td></center>
+{%  endblock %}

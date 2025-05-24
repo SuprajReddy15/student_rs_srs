@@ -1,0 +1,67 @@
+{% extends "about.html" %}
+
+{% block title %}
+  about us
+{% endblock title %}
+
+{% block 'body' %}
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<nav class="navbar" style="background-color:#5CDB95;  display: flex;height:50px;margin-bottum:0%;" onmouseover="typeWriter()">
+    <div class="logo" style="color:white;font-size:25px;margin-top:13px;margin-left:60px;">Course registration</div>
+      <ul class="nav-links">
+            <div class="menu">
+
+<a class="home"  href="{% url 'home' %}" >Home</a>&nbsp;&nbsp;
+ <a class="about" href="{% url 'about' %}" >About</a>
+                <a class="contact" href="{% url 'contact' %}">Contact us</a>&nbsp;
+
+
+                <div class="dropdown">
+  <button class="dropbtn">Login</button>
+  <div class="dropdown-content">
+  <a href="{% url 'studentlogin' %}">Student</a>
+  <a href="{% url 'facultylogin' %}">Faculty</a>
+  <a href="{% url 'login' %}">Admin</a>
+  </div>
+</div>
+ &nbsp;
+
+            </div>
+      </ul>
+</nav>
+<div style="height:120;border:solid;margin-top:10px;border-radius:80px;border-color:#05386B;margin-left:10px;margin-right:10px;background-color:#05386B;">
+<center>
+    <h1 style="color:white;margin-top:40px;">Contact us</h1>
+</center>
+
+</div>
+<div style="margin-top:20px;"><iframe src="https://www.google.com/maps/d/embed?mid=1Ag_4UqU_cAdh3NOsxvQTMqkO9MY&hl=en&ehbc=2E312F" width="100%" height="480"></iframe></div>
+<h2>Contact Form</h2>
+<div class="container">
+  <form action="/form/submit" method="POST">
+    <label for="fname" style="margin-left:35%">Name</label>
+    <input type="text" id="fname" name="name" placeholder="Type your name..">
+    <label for="lname" >Last Name</label>
+    <input type="text" id="lname" name="surname" placeholder="Type your last name..">
+    <label for="mail">E-mail Address</label>
+    <input type="text" id="mail" name="e-mail" placeholder="Type your e-mail..">
+    <label for="country" style="margin-left:35%;margin-top:20px;" >Country</label>
+    <select id="country" name="country">
+      <option value="italy">Italy</option>
+      <option value="spain">Spain</option>
+      <option value="france">France</option>
+    </select>
+    <label for="message" style="margin-left:65px">Message</label>
+    <textarea style="height:80px;" id="message" name="message" placeholder="Type your message.." style="height: 200px"></textarea>
+    <input type="submit" value="Send">
+  </form>
+</div>
+</body>
+</html>
+{% endblock %}

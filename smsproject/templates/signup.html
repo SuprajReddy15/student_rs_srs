@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Flip Course System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff6b6b, #556270); /* Background gradient */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #264653;
+        }
+
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .inputBox label {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            color: #999;
+            pointer-events: none;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+
+        .inputBox input {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        }
+
+        .inputBox input:focus {
+            border-color: #264653;
+        }
+
+        .inputBox input:focus + label {
+            top: -10px;
+            font-size: 12px;
+            color: #264653;
+        }
+
+        .btn {
+            width: 100%;
+            background: #264653;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #195c71;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #fff; /* Text color changed to white */
+        }
+
+        .signup-link a {
+            color: #ffd166; /* Link color changed */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            color: #ff6b6b; /* Hover color changed */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup - Flip Course System</h2>
+        <form method="post" action="DEMO2.html">
+            <div class="inputBox">
+                <input type="email" name="username" required>
+                <label>Enter your Email</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="password" required>
+                <label>Enter your Password</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" name="confirm_password" required>
+                <label>Confirm Password</label>
+            </div>
+            <button type="submit" class="btn">Signup</button>
+        </form>
+        <div class="signup-link">
+            Already have an account? <a href="#">Login here</a>
+        </div>
+    </div>
+</body>
+</html>

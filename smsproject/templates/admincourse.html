@@ -1,0 +1,21 @@
+{% extends 'adminhome.html' %}
+{%  block  'body' %}
+<center>
+
+    <a style="color:white;text-decoration:none;" href="{% url 'addcourse' %}"><button type="button" class="btn btn-success">Add Courses
+    </button></a>
+
+    <button class="button">
+    <a href="{% url 'viewcourses' %}">View all Courses</a>
+</button>
+
+    <button class="button">
+    <a href="">Update Courses</a>
+</button>
+
+    <button class="button">
+    <a href="{% url 'deletecourse' %}">Delete Courses</a>
+</button>
+    </center>
+
+{%  endblock %}

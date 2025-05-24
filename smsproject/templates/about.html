@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<link type="text/css" rel="stylesheet" href="{% static 'css/admin_style.css' %}">
+    <title>Title</title>
+</head>
+<body style="margin-left:0%;margin-right:0%;margin-top:0%;">
+{%  block  'body' %}
+<nav class="navbar" style="background-color:#5CDB95;  display: flex;height:50px;margin-bottum:0%;" onmouseover="typeWriter()">
+    <div class="logo" style="color:white;font-size:25px;margin-top:13px;margin-left:60px;">Course registration</div>
+      <ul class="nav-links">
+            <div class="menu">
+
+<a class="home"  href="{% url 'home' %}" >Home</a>&nbsp;&nbsp;
+ <a class="about" href="{% url 'about' %}" >About</a>
+                <a class="contact" href="{% url 'contact' %}">Contact us</a>&nbsp;
+
+
+                <div class="dropdown">
+  <button class="dropbtn">Login</button>
+  <div class="dropdown-content">
+  <a href="{% url 'studentlogin' %}">Student</a>
+  <a href="{% url 'facultylogin' %}">Faculty</a>
+  <a href="{% url 'login' %}">Admin</a>
+  </div>
+</div>
+ &nbsp;
+
+            </div>
+      </ul>
+</nav>
+
+<div style="height:120;border:solid;margin-top:10px;border-radius:80px;border-color:#05386B;margin-left:10px;margin-right:10px;background-color:#05386B;">
+<center>
+    <h1 style="color:white;margin-top:40px;">About us</h1>
+</center>
+</div>
+<div class="about"style="margin-top:20px;display:flex;flex:1 1;margin-left:10px;height:500px;" onmouseover="typeWriter()" >
+  <div><img class="aboutimg" style="margin-left:0%;height:450px;width:480px;display :inline;margin-top:20px;" src="/static/images/about.jpg"></div>
+     <div style=" color:#5CDB95;margin-left:20px;">
+
+
+<p id="demo" style="font-size:20px;line-height:45px;"></p>
+     </div>
+</div>
+<script>
+      var i = 0;
+var txt = "Online Course Registration System is Web-based registration software that helps you to register courses online. It is ideal for schools, educational camps, corporate training programs, and online training programs. It also provides time to time current status information related to courses.Here we have used two main languages for working, which are HTML , CSS , PYTHON , JAVA SCRIPT in DJANGO . HTML and CSS is used for the frontend of the website and PYTHON is used as the backend language for storing the data in the form of a database. We have two panels or modules, admin, and student. Both the pages can be opened, and we can log in using the set password.We can also change the passwords for security purposes . The admin also has the authority of generating new sessions, courses, departments, and various fields related to the respective institution. The admin registers the students and provides them with a unique username, password. That the student is enrolled in a specific course. In a similar manner, the user or the student can log in by entering the credentials provided by the admin. Users can also change their passwords, view their details, and enroll in the desired course using the unique pin code provided by the admin. ";
+var speed = 15;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+{%  endblock %}
+</body>
+</html>
